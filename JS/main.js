@@ -100,3 +100,20 @@ mostrar6.addEventListener('click', () => {
 cerrar6.addEventListener('click', () => {
     dlg6.close();
 });
+
+
+function enviar() {
+    document.getElementById("formulario").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        let nombre = document.getElementById("nombre").value;
+        let telefono = document.getElementById("telefono").value;
+        let mensaje = document.getElementById("mensaje").value;
+
+        let numeroWhatsApp = "523411276535";
+        let url = `https://wa.me/${numeroWhatsApp}?text=Hola, soy ${nombre}, mi teléfono es ${telefono}. ${mensaje}`;
+
+        window.open(url, "_blank");
+    });
+
+}
