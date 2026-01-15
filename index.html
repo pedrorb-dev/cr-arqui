@@ -1,200 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arquitectura CR</title>
-    <link rel="stylesheet" href="CSS/styles.css">
+    <title>Diseño y Construcción | Tu Futuro Hogar</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header id="principal">
-        <nav>
-            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
-            <ul class="menu" id="menu">
-                <li><a href="#principal">
-                        <img src="../IMAGES/logo-nofondo.png" alt="" id="logo">
-                </a></li>
-                <li class="menu-item"><a href="#principal">Inicio</a></li>
-                <li class="menu-item"><a href="#proyectos">Proyectos</a></li>
-                <li class="menu-item"><a href="#contacto">Contáctanos</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=100090626030952"><img src="../IMAGES/facebook-icono.png" alt="" id="logo-redes"></a></li>
-                <li><a href="https://www.instagram.com/cr.arquitecturamx/"><img src="../IMAGES/instagram-icono.png" alt="" id="logo-redes"></a></li>
-            </ul>
-        </nav>
-    
-        <div class="contenedor">
-            <div class="proy-actual">
-                <h1 id="titulo-principal">Valle del Lago</h1>
-                <p>Proyecto residencial de 2500 m2 en Tapalpa Jalisco  <br><br><a href="#imagenes-galeria" id="mostrar">Ver más</a></p>
-            </div>
-            <div class="typing"><span id="text"></span>
-                <div class="cursor"></div>
+    <!-- Header con menú -->
+    <header class="header">
+        <div class="menu">
+            <div class="menu-container">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="#">
+                        <img src="IMAGES/logo.png" alt="Logo Construcción" width="100">
+                    </a>
+                </div>
+                
+                <!-- Menú hamburguesa para móvil -->
+                <button class="menu-icon" aria-label="Abrir menú" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <!-- Navegación -->
+                <nav class="nav-menu">
+                    <ul class="nav-list">
+                        <li class="menu-item"><a href="#inicio">Inicio</a></li>
+                        <li class="menu-item"><a href="#proyectos">Proyectos</a></li>
+                        <li class="menu-item"><a href="#galeria">Galería</a></li>
+                        <li class="menu-item"><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <script src="JS/main.js"></script>
     </header>
-    <main>
-        <h1>PROYECTOS REALIZADOS</h1>
-        <section id="proyectos">
-            <article id="art1">
-                <img src="../IMAGES/1 (58).jpeg" alt="">
-                <span id="informacion-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
-                <dialog id="art1-dlg">
-                    <h1>Detalles del proyecto</h1>
-                    <p id="texto-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt 
-                        debitis laborum deleniti possimus minima, ea soluta suscipit molestiae optio in 
-                        non corporis illum sed cum aliquam at numquam velit?</p>
-                    <button id="cerrar1">Cerrar</button>
-                </dialog>
-            </article>
-            <article id="art2">
-                <img src="../IMAGES/1 (57).jpeg" alt="">
-                <span id="informacion-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
-                <dialog id="art2-dlg">
-                    <h1>Detalles del proyecto</h1>
-                    <p id="texto-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt 
-                        debitis laborum deleniti possimus minima, ea soluta suscipit molestiae optio in 
-                        non corporis illum sed cum aliquam at numquam velit?</p>
-                    <button id="cerrar2">Cerrar</button>
-                </dialog>
-            </article>
-            <article id="art3">
-                <img src="../IMAGES/1 (56).jpeg" alt="">
-                <span id="informacion-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
-                <dialog id="art3-dlg">
-                    <h1>Detalles del proyecto</h1>
-                    <p id="texto-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt 
-                        debitis laborum deleniti possimus minima, ea soluta suscipit molestiae optio in 
-                        non corporis illum sed cum aliquam at numquam velit?</p>
-                    <button id="cerrar3">Cerrar</button>
-                </dialog>
-            </article>
-            <article id="art4">
-                <img src="../IMAGES/1 (55).jpeg" alt="">
-                <span id="informacion-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
-                <dialog id="art4-dlg">
-                    <h1>Detalles del proyecto</h1>
-                    <p id="texto-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt 
-                        debitis laborum deleniti possimus minima, ea soluta suscipit molestiae optio in 
-                        non corporis illum sed cum aliquam at numquam velit?</p>
-                    <button id="cerrar4">Cerrar</button>
-                </dialog>
-            </article>
-            <article id="art5">
-                <img src="../IMAGES/1 (54).jpeg" alt="">
-                <span id="informacion-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
-                <dialog id="art5-dlg">
-                    <h1>Detalles del proyecto</h1>
-                    <p id="texto-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt 
-                        debitis laborum deleniti possimus minima, ea soluta suscipit molestiae optio in 
-                        non corporis illum sed cum aliquam at numquam velit?</p>
-                    <button id="cerrar5">Cerrar</button>
-                </dialog>
-            </article>
-            <article id="art6">
-                <img src="../IMAGES/1 (53).jpeg" alt="">
-                <span id="informacion-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
-                <dialog id="art6-dlg">
-                    <h1>Detalles del proyecto</h1>
-                    <p id="texto-dialog">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores deserunt 
-                        debitis laborum deleniti possimus minima, ea soluta suscipit molestiae optio in 
-                        non corporis illum sed cum aliquam at numquam velit?</p>
-                    <button id="cerrar6">Cerrar</button>
-                </dialog>
-            </article>
-            
-        </section>
-        <section id="imagenes-galeria">
-            <h1>Proyecto Valle del Lago</h1>
-            <div class="imagenes"><img src="../IMAGES/1 (1).jpeg" alt="">
-            <img src="../IMAGES/1 (2).jpeg" alt="">
-            <img src="../IMAGES/1 (3).jpeg" alt="">
-            <img src="../IMAGES/1 (4).jpeg" alt="">
-            <img src="../IMAGES/1 (5).jpeg" alt="">
-            <img src="../IMAGES/1 (6).jpeg" alt="">
-            <img src="../IMAGES/1 (7).jpeg" alt="">
-            <img src="../IMAGES/1 (8).jpeg" alt="">
-            <img src="../IMAGES/1 (9).jpeg" alt="">
-            <img src="../IMAGES/1 (10).jpeg" alt="">
-            <img src="../IMAGES/1 (11).jpeg" alt="">
-            <img src="../IMAGES/1 (12).jpeg" alt="">
-            <img src="../IMAGES/1 (13).jpeg" alt="">
-            <img src="../IMAGES/1 (14).jpeg" alt="">
-            <img src="../IMAGES/1 (15).jpeg" alt="">
-            <img src="../IMAGES/1 (16).jpeg" alt="">
-            <img src="../IMAGES/1 (17).jpeg" alt="">
-            <img src="../IMAGES/1 (18).jpeg" alt="">
-            <img src="../IMAGES/1 (19).jpeg" alt="">
-            <img src="../IMAGES/1 (20).jpeg" alt="">
-            <img src="../IMAGES/1 (21).jpeg" alt="">
-            <img src="../IMAGES/1 (22).jpeg" alt="">
-            <img src="../IMAGES/1 (23).jpeg" alt="">
-            <img src="../IMAGES/1 (24).jpeg" alt="">
-            <img src="../IMAGES/1 (25).jpeg" alt="">
-            <img src="../IMAGES/1 (26).jpeg" alt="">
-            <img src="../IMAGES/1 (27).jpeg" alt="">
-            <img src="../IMAGES/1 (28).jpeg" alt="">
-            <img src="../IMAGES/1 (29).jpeg" alt="">
-            <img src="../IMAGES/1 (30).jpeg" alt="">
-            <img src="../IMAGES/1 (31).jpeg" alt="">
-            <img src="../IMAGES/1 (32).jpeg" alt="">
-            <img src="../IMAGES/1 (33).jpeg" alt="">
-            <img src="../IMAGES/1 (34).jpeg" alt="">
-            <img src="../IMAGES/1 (35).jpeg" alt="">
-            <img src="../IMAGES/1 (36).jpeg" alt="">
-            <img src="../IMAGES/1 (37).jpeg" alt="">
-            <img src="../IMAGES/1 (38).jpeg" alt="">
-            <img src="../IMAGES/1 (39).jpeg" alt="">
-            <img src="../IMAGES/1 (40).jpeg" alt="">
-            <img src="../IMAGES/1 (41).jpeg" alt="">
-            <img src="../IMAGES/1 (42).jpeg" alt="">
-            <img src="../IMAGES/1 (43).jpeg" alt="">
-            <img src="../IMAGES/1 (44).jpeg" alt="">
-            <img src="../IMAGES/1 (45).jpeg" alt="">
-            <img src="../IMAGES/1 (46).jpeg" alt="">
-            <img src="../IMAGES/1 (47).jpeg" alt="">
-            <img src="../IMAGES/1 (48).jpeg" alt="">
-            <img src="../IMAGES/1 (49).jpeg" alt="">
-            <img src="../IMAGES/1 (50).jpeg" alt="">
-            <img src="../IMAGES/1 (51).jpeg" alt="">
-            <img src="../IMAGES/1 (52).jpeg" alt=""></div>
-        </section>
-        <section id="contacto">
-            <h1>CONTÁCTANOS</h1>
-            <form id="formulario">
-                <h1>DATOS DE CONTACTO</h1>
-                <b>Nombre:</b>
-                <input type="text" id="nombre" placeholder="Nombre" required>
-                <b>Teléfono:</b>
-                <input type="tel" id="telefono" placeholder="Telefono" required>
-                <b>Mensaje</b>
-                <textarea name="mensaje" id="mensaje">Mensaje</textarea>
-                <button onclick="enviar()">Enviar</button>
-            </form>
-        </section>
-        <footer>
-            <article>
-                <h2>Contacto</h2>
-                <ul>
-                    <li>Tel: 341 - 127 - 6535</li>
-                    <li>cesar@arqui.com</li>
-                </ul>
-            </article>
-            <article>
-                <h2>Siguenos</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/profile.php?id=100090626030952"><img src="../IMAGES/facebook-icono.png" alt="" id="logo-redes"></a></li>
-                <li><a href="https://www.instagram.com/cr.arquitecturamx/"><img src="../IMAGES/instagram-icono.png" alt="" id="logo-redes"></a></li>
-                </ul>
-            </article>
-        </footer>
-    </main>
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById("menu");
-            menu.classList.toggle("show");
-        }
-    </script>
-</body>
 
+    <!-- Sección Principal con Background Slideshow -->
+    <main id="inicio">
+        <section id="principal">
+            <!-- Backgrounds optimizados (solo 5 imágenes) -->
+            <div class="bg-slide slide-1"></div>
+            <div class="bg-slide slide-2"></div>
+            <div class="bg-slide slide-3"></div>
+            <div class="bg-slide slide-4"></div>
+            <div class="bg-slide slide-5"></div>
+            
+            <div class="contenedor">
+                <div class="typing-container">
+                    <h1 id="text" class="typing-text"></h1>
+                    <span class="cursor"></span>
+                </div>
+                
+                <div class="proy-actual">
+                    <h2>¿Listo para construir tu sueño?</h2>
+                    <a href="#proyectos" id="mostrar" class="btn-primary">Ver Proyectos</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="section-proyectos">
+        <h2>Nuestros Proyectos</h2>
+        <div class="proyectos-grid">
+            <!-- Proyecto 1 -->
+            <article class="proyecto-card" data-dialog="proyecto1">
+                <div class="proyecto-img">
+                    <img src="IMAGES/proyecto1.jpg" alt="Casa Moderna" loading="lazy">
+                </div>
+                <div class="proyecto-info">
+                    <h3>Casa Moderna</h3>
+                    <p class="proyecto-desc">Diseño contemporáneo con acabados de lujo</p>
+                    <div class="proyecto-detalles" id="informacion-texto">
+                        <p><strong>Área:</strong> 250 m²</p>
+                        <p><strong>Tiempo:</strong> 8 meses</p>
+                        <p><strong>Ubicación:</strong> Zona Residencial</p>
+                    </div>
+                    <button class="btn-ver" data-open-dialog="proyecto1">Ver Detalles</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 2 -->
+            <article class="proyecto-card" data-dialog="proyecto2">
+                <div class="proyecto-img">
+                    <img src="IMAGES/proyecto2.jpg" alt="Departamento Familiar" loading="lazy">
+                </div>
+                <div class="proyecto-info">
+                    <h3>Departamento Familiar</h3>
+                    <p class="proyecto-desc">Espacios optimizados para familias</p>
+                    <div class="proyecto-detalles" id="informacion-texto">
+                        <p><strong>Área:</strong> 180 m²</p>
+                        <p><strong>Tiempo:</strong> 6 meses</p>
+                        <p><strong>Ubicación:</strong> Centro Urbano</p>
+                    </div>
+                    <button class="btn-ver" data-open-dialog="proyecto2">Ver Detalles</button>
+                </div>
+            </article>
+
+            <!-- Proyecto 3 -->
+            <article class="proyecto-card" data-dialog="proyecto3">
+                <div class="proyecto-img">
+                    <img src="IMAGES/proyecto3.jpg" alt="Casa Campestre" loading="lazy">
+                </div>
+                <div class="proyecto-info">
+                    <h3>Casa Campestre</h3>
+                    <p class="proyecto-desc">Conexión con la naturaleza</p>
+                    <div class="proyecto-detalles" id="informacion-texto">
+                        <p><strong>Área:</strong> 350 m²</p>
+                        <p><strong>Tiempo:</strong> 12 meses</p>
+                        <p><strong>Ubicación:</strong> Zona Rural</p>
+                    </div>
+                    <button class="btn-ver" data-open-dialog="proyecto3">Ver Detalles</button>
+                </div>
+            </article>
+
+            <!-- Más proyectos (4-6) con misma estructura -->
+        </div>
+    </section>
+
+    <!-- Diálogos Modales -->
+    <dialog id="proyecto1" class="modal">
+        <div class="modal-content">
+            <h3>Casa Moderna - Detalles Completos</h3>
+            <p><strong>Descripción:</strong> Diseño arquitectónico contemporáneo con enfoque en la eficiencia energética y espacios abiertos.</p>
+            <p><strong>Características:</strong> 3 recámaras, 3.5 baños, cocina integral, terraza, jardín vertical.</p>
+            <p><strong>Materiales:</strong> Concreto visto, madera certificada, acero inoxidable.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" data-close-dialog>Cerrar</button>
+                <a href="#contacto" class="btn-secondary">Solicitar Cotización</a>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Diálogos 2-6 con misma estructura -->
+
+    <!-- Sección Galería -->
+    <section id="galeria" class="section-galeria">
+        <h2>Galería de Obras</h2>
+        <div class="galeria-grid">
+            <!-- Imágenes con lazy loading -->
+            <div class="galeria-item">
+                <img src="IMAGES/galeria1.jpg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <!-- Más imágenes -->
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="section-contacto">
+        <h2>Contacto</h2>
+        <form id="formulario" class="contact-form">
+            <div class="form-group">
+                <label for="nombre">Nombre completo *</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="50">
+            </div>
+            
+            <div class="form-group">
+                <label for="telefono">Teléfono *</label>
+                <input type="tel" id="telefono" name="telefono" required pattern="[0-9]{10}">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+            </div>
+            
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" maxlength="500"></textarea>
+            </div>
+            
+            <div class="form-actions">
+                <button type="submit" class="btn-primary btn-submit">
+                    <i class="fab fa-whatsapp"></i> Enviar por WhatsApp
+                </button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="IMAGES/logo-white.png" alt="Logo" width="80">
+            </div>
+            
+            <div class="footer-info">
+                <h3>Construcciones Excelencia</h3>
+                <p><i class="fas fa-phone"></i> +52 341 127 6535</p>
+                <p><i class="fas fa-envelope"></i> contacto@construccion.com</p>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Síguenos</h3>
+                <ul class="social-list">
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Construcciones Excelencia. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/typewriter.js" defer></script>
+    <script src="js/dialogManager.js" defer></script>
+    <script src="js/formHandler.js" defer></script>
+    <script src="js/menuMobile.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
 </html>
