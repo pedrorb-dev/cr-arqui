@@ -14,8 +14,8 @@
             <div class="menu-container">
                 <!-- Logo -->
                 <div class="logo">
-                    <a href="#">
-                        <img src="IMAGES/logo.png" alt="Logo Construcción" width="100">
+                    <a href="#inicio">
+                        <img src="IMAGES/logo-nofondo.png" alt="Logo Construcción" width="100">
                     </a>
                 </div>
                 
@@ -40,7 +40,11 @@
     <!-- Sección Principal con Background Slideshow -->
     <main id="inicio">
         <section id="principal">
-            <!-- Backgrounds optimizados (solo 5 imágenes) -->
+            <div class="bg-slide slide-1"></div>
+            <div class="bg-slide slide-2"></div>
+            <div class="bg-slide slide-3"></div>
+            <div class="bg-slide slide-4"></div>
+            <div class="bg-slide slide-5"></div>
             <div class="bg-slide slide-1"></div>
             <div class="bg-slide slide-2"></div>
             <div class="bg-slide slide-3"></div>
@@ -68,7 +72,7 @@
             <!-- Proyecto 1 -->
             <article class="proyecto-card" data-dialog="proyecto1">
                 <div class="proyecto-img">
-                    <img src="IMAGES/proyecto1.jpg" alt="Casa Moderna" loading="lazy">
+                    <img src="IMAGES/1 (1).jpeg" alt="Casa Moderna" loading="lazy">
                 </div>
                 <div class="proyecto-info">
                     <h3>Casa Moderna</h3>
@@ -85,7 +89,7 @@
             <!-- Proyecto 2 -->
             <article class="proyecto-card" data-dialog="proyecto2">
                 <div class="proyecto-img">
-                    <img src="IMAGES/proyecto2.jpg" alt="Departamento Familiar" loading="lazy">
+                    <img src="IMAGES/1 (2).jpeg" alt="Departamento Familiar" loading="lazy">
                 </div>
                 <div class="proyecto-info">
                     <h3>Departamento Familiar</h3>
@@ -102,7 +106,7 @@
             <!-- Proyecto 3 -->
             <article class="proyecto-card" data-dialog="proyecto3">
                 <div class="proyecto-img">
-                    <img src="IMAGES/proyecto3.jpg" alt="Casa Campestre" loading="lazy">
+                    <img src="IMAGES/1 (2).jpeg" alt="Casa Campestre" loading="lazy">
                 </div>
                 <div class="proyecto-info">
                     <h3>Casa Campestre</h3>
@@ -116,7 +120,7 @@
                 </div>
             </article>
 
-            <!-- Más proyectos (4-6) con misma estructura -->
+            
         </div>
     </section>
 
@@ -124,12 +128,42 @@
     <dialog id="proyecto1" class="modal">
         <div class="modal-content">
             <h3>Casa Moderna - Detalles Completos</h3>
+            <p><strong>Descripción:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                Quasi odio temporibus cum praesentium expedita, fuga, ipsam ex, deserunt repudiandae distinctio
+                 eveniet aspernatur quisquam reprehenderit laboriosam esse ab omnis quaerat eligendi?</p>
+            <p><strong>Características:</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis saepe neque earum atque veniam qui 
+                consequatur unde facilis velit corrupti vitae laboriosam aspernatur quibusdam sint, animi facere magni, soluta beatae?</p>
+            <p><strong>Materiales:</strong>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor nesciunt sequi consequuntur delectus vel fuga, 
+                recusandae voluptas praesentium tempora perspiciatis quo voluptatum earum error, facere libero sint ducimus quidem harum.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" data-close-dialog>Cerrar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="proyecto2" class="modal">
+        <div class="modal-content">
+            <h3>Casa Moderna - Detalles Completos</h3>
+            <p><strong>Descripción:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum fuga aperiam pariatur maiores aut modi nisi! 
+                Laboriosam mollitia sed, laudantium ipsum voluptas velit! Esse similique earum molestias! Corporis, quod laborum!</p>
+            <p><strong>Características:</strong> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, voluptatem voluptas. Aperiam enim voluptate sint, 
+                autem architecto facere ea quia, soluta error recusandae earum optio ratione? Ea aperiam et iste.</p>
+            <p><strong>Materiales:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat error deleniti nisi aliquam iste expedita nesciunt 
+                necessitatibus voluptate, soluta at est? Consequuntur harum aliquid facilis quia soluta dolorum accusantium quos.</p>
+            <div class="modal-actions">
+                <button class="btn-primary" data-close-dialog>Cerrar</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="proyecto3" class="modal">
+        <div class="modal-content">
+            <h3>Casa Moderna - Detalles Completos</h3>
             <p><strong>Descripción:</strong> Diseño arquitectónico contemporáneo con enfoque en la eficiencia energética y espacios abiertos.</p>
             <p><strong>Características:</strong> 3 recámaras, 3.5 baños, cocina integral, terraza, jardín vertical.</p>
             <p><strong>Materiales:</strong> Concreto visto, madera certificada, acero inoxidable.</p>
             <div class="modal-actions">
                 <button class="btn-primary" data-close-dialog>Cerrar</button>
-                <a href="#contacto" class="btn-secondary">Solicitar Cotización</a>
             </div>
         </div>
     </dialog>
@@ -142,7 +176,100 @@
         <div class="galeria-grid">
             <!-- Imágenes con lazy loading -->
             <div class="galeria-item">
-                <img src="IMAGES/galeria1.jpg" alt="Proceso construcción" loading="lazy">
+                <img src="IMAGES/1 (5).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (6).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (7).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (8).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (9).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (10).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (11).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (12).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (13).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (14).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (15).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (16).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (17).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (18).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (19).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (20).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (21).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (22).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (23).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (24).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (25).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (26).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (27).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (28).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (29).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (30).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (31).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (32).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (33).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (34).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (35).jpeg" alt="Proceso construcción" loading="lazy">
+            </div>
+            <div class="galeria-item">
+                <img src="IMAGES/1 (36).jpeg" alt="Proceso construcción" loading="lazy">
             </div>
             <!-- Más imágenes -->
         </div>
@@ -180,31 +307,30 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">
-                <img src="IMAGES/logo-white.png" alt="Logo" width="80">
+                <img src="IMAGES/logo-nofondo.png" alt="Logo" width="200">
             </div>
             
             <div class="footer-info">
                 <h3>Construcciones Excelencia</h3>
                 <p><i class="fas fa-phone"></i> +52 341 127 6535</p>
-                <p><i class="fas fa-envelope"></i> contacto@construccion.com</p>
+                <p><i class="fas fa-envelope"></i> cr434788@gmail.com</p>
             </div>
             
             <div class="footer-social">
                 <h3>Síguenos</h3>
                 <ul class="social-list">
-                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100090626030952" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/cr.arquitecturamx/" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://api.whatsapp.com/send/?phone=523411276535" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2024 Construcciones Excelencia. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Construcciones Excelencia. Todos los derechos reservados.</p>
         </div>
     </footer>
 

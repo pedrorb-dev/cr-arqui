@@ -164,7 +164,7 @@ class FormHandler {
     sendToWhatsApp(data) {
         return new Promise((resolve, reject) => {
             try {
-                const phoneNumber = "523411276535"; // Reemplaza con tu número
+                const phoneNumber = "523411276535"; 
                 
                 let message = `*Nuevo contacto desde la web*%0A%0A`;
                 message += `*Nombre:* ${data.nombre}%0A`;
