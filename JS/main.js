@@ -1,4 +1,4 @@
-// Main Application
+// Main 
 class App {
     constructor() {
         this.modules = {};
