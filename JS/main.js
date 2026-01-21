@@ -17,7 +17,6 @@ class App {
         this.setupScrollEffects();
         this.setupAnalytics();
         
-        console.log('App inicializada correctamente');
     }
     
     setupIntersectionObserver() {

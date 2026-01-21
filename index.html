@@ -9,33 +9,41 @@
 </head>
 <body>
     <!-- Header con menú -->
-    <header class="header">
-        <div class="menu">
-            <div class="menu-container">
-                <!-- Logo -->
-                <div class="logo">
-                    <a href="#inicio">
-                        <img src="IMAGES/logo-nofondo.png" alt="Logo Construcción" width="100">
-                    </a>
-                </div>
-                
-                <!-- Menú hamburguesa para móvil -->
-                <button class="menu-icon" aria-label="Abrir menú" aria-expanded="false">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
-                <!-- Navegación -->
-                <nav class="nav-menu">
-                    <ul class="nav-list">
-                        <li class="menu-item"><a href="#inicio">Inicio</a></li>
-                        <li class="menu-item"><a href="#proyectos">Proyectos</a></li>
-                        <li class="menu-item"><a href="#galeria">Galería</a></li>
-                        <li class="menu-item"><a href="#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
+    <!-- Reemplaza la sección del header con esto -->
+<header class="header">
+    <div class="menu">
+        <div class="menu-container">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="IMAGES/logo-nofondo.png" alt="Logo Construcción" width="100">
+                </a>
             </div>
+            
+            <!-- Hamburger Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <!-- Navegación -->
+            <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li class="menu-item"><a href="#inicio">Inicio</a></li>
+                    <li class="menu-item"><a href="#proyectos">Proyectos</a></li>
+                    <li class="menu-item"><a href="#galeria">Galería</a></li>
+                    <li class="menu-item"><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Overlay para cerrar menú (se crea con JS) -->
         </div>
-    </header>
+    </div>
+</header>
+
+<!-- Añade esto justo después del header -->
+<div class="menu-overlay" id="menuOverlay"></div>
 
     <!-- Sección Principal con Background Slideshow -->
     <main id="inicio">

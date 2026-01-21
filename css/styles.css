@@ -65,7 +65,7 @@ body {
     border: 0;
 }
 
-/* ===== HEADER Y MENÚ ===== */
+/* ===== HEADER Y MENÚ - CORREGIDO ===== */
 .header {
     position: fixed;
     top: 0;
@@ -76,7 +76,7 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(15px);
     height: var(--header-height);
-    transition: height var(--transition-fast);
+    transition: all var(--transition-fast);
 }
 
 .menu-container {
@@ -99,35 +99,55 @@ body {
     transform: scale(1.05);
 }
 
-.menu-icon {
+/* HAMBURGUESA CORREGIDA */
+.menu-toggle {
     display: none;
-    background: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
     border: none;
-    color: var(--primary-color);
-    font-size: 1.8rem;
     cursor: pointer;
-    padding: 0.5rem;
-    transition: color var(--transition-fast);
+    padding: 0;
+    z-index: 1001;
+    position: relative;
 }
 
-.menu-icon:hover {
-    color: var(--secondary-color);
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
 }
 
-.menu-icon[aria-expanded="true"] i::before {
-    content: "\f00d";
+/* Animación de hamburguesa a X */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
 }
 
 .nav-menu {
-    flex: 1;
     display: flex;
     justify-content: flex-end;
+    flex: 1;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-item a {
@@ -158,6 +178,115 @@ body {
 
 .menu-item a:hover::after {
     width: 100%;
+}
+
+/* ===== MENÚ MÓVIL CORREGIDO ===== */
+@media screen and (max-width: 768px) {
+    .header {
+        height: var(--header-height-mobile);
+        background-color: rgba(0, 0, 0, 0.95);
+    }
+    
+    .menu-container {
+        padding: 0 1rem;
+    }
+    
+    .logo img {
+        height: 60px;
+        width: auto;
+    }
+    
+    /* Mostrar hamburguesa en móvil */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Ocultar menú normal en móvil */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 100px;
+        padding-left: 2rem;
+        transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        z-index: 1000;
+        box-shadow: -5px 0 25px rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Clase activa para mostrar menú */
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    /* Lista vertical en móvil */
+    .nav-list {
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+    }
+    
+    .menu-item {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .menu-item:last-child {
+        border-bottom: none;
+    }
+    
+    .menu-item a {
+        display: block;
+        padding: 1.2rem 0;
+        font-size: 1.2rem;
+        text-align: left;
+        width: 100%;
+    }
+    
+    .menu-item a:hover {
+        color: var(--secondary-color);
+        padding-left: 1rem;
+    }
+    
+    .menu-item a::after {
+        display: none;
+    }
+    
+    /* Overlay para cerrar menú */
+    .menu-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .menu-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    /* Evitar scroll cuando el menú está abierto */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* Ajustar contenido principal */
+    #principal {
+        margin-top: var(--header-height-mobile);
+    }
 }
 
 /* ===== HERO SECTION ===== */
@@ -199,26 +328,6 @@ body {
 }
 .slide-5 {
     background-image: linear-gradient(var(--overlay-dark), var(--overlay-dark)), url("../IMAGES/1 (63).jpeg");
-    animation-delay: 16s;
-}
-.slide-6 {
-    background-image: linear-gradient(var(--overlay-dark), var(--overlay-dark)), url("../IMAGES/1 (64).jpeg");
-    animation-delay: 0s;
-}
-.slide-7 {
-    background-image: linear-gradient(var(--overlay-dark), var(--overlay-dark)), url("../IMAGES/1 (65).jpeg");
-    animation-delay: 4s;
-}
-.slide-8 {
-    background-image: linear-gradient(var(--overlay-dark), var(--overlay-dark)), url("../IMAGES/1 (66).jpeg");
-    animation-delay: 8s;
-}
-.slide-9 {
-    background-image: linear-gradient(var(--overlay-dark), var(--overlay-dark)), url("../IMAGES/1 (67).jpeg");
-    animation-delay: 12s;
-}
-.slide-10 {
-    background-image: linear-gradient(var(--overlay-dark), var(--overlay-dark)), url("../IMAGES/1 (68).jpeg");
     animation-delay: 16s;
 }
 
@@ -682,7 +791,7 @@ body {
     color: #aaa;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE ADICIONAL ===== */
 @media screen and (max-width: 992px) {
     .header {
         height: var(--header-height-mobile);
@@ -697,47 +806,11 @@ body {
     }
     
     .logo img {
-        height: 50px;
+        height: 60px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    
-    .nav-menu {
-        position: fixed;
-        top: var(--header-height-mobile);
-        left: 0;
-        width: 100%;
-        background-color: var(--overlay-dark);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        padding: 2rem;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all var(--transition-fast);
-    }
-    
-    .nav-menu.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .menu-item a {
-        font-size: 1.3rem;
-        display: block;
-        text-align: center;
-    }
-    
     .contenedor {
         padding: 1rem;
     }
@@ -796,8 +869,19 @@ body {
     .footer-info p {
         justify-content: center;
     }
+    
+    .nav-menu {
+        width: 85%;
+        padding-left: 1.5rem;
+    }
+    
+    .menu-item a {
+        font-size: 1.1rem;
+        padding: 1rem 0;
+    }
 }
 
+/* ===== UTILIDADES ===== */
 .hidden {
     display: none !important;
 }
