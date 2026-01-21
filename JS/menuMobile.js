@@ -1,4 +1,3 @@
-// js/menuMobile.js
 class MobileMenu {
     constructor() {
         this.menuToggle = document.getElementById('menuToggle');
